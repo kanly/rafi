@@ -1,0 +1,17 @@
+.*
+!.gitignore
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.sc
+*.idea*
+
+# Sbt
+project/project
+project/target
+target/
+
+#dolphin
+.directory
