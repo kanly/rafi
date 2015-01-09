@@ -1,8 +1,5 @@
 package consumer
 
-import akka.actor.ActorSystem
-import org.slf4j.LoggerFactory
-
 object ConsumerApp {
   val system = ActorSystem("consumer")
   val log = LoggerFactory.getLogger("MAIN")

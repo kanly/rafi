@@ -1,9 +1,3 @@
-name := "rafi"
-
-version := "0.1"
-
-scalaVersion := "2.11.1"
-
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.3.6",
   "com.typesafe.akka" %% "akka-camel" % "2.3.6",
@@ -15,6 +9,3 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.1.2",
   "com.typesafe.akka" %% "akka-testkit" % "2.3.6" % "test",
   "org.scalatest" %% "scalatest" % "2.1.6" % "test")
-
-scalacOptions += "-target:jvm-1.6"
-  
