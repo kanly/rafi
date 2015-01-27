@@ -15,7 +15,8 @@ def rafiModule(name: String): Project = Project(name, file(name)).
       "com.typesafe.akka" %% "akka-actor" % "2.3.6",
       "com.typesafe.akka" %% "akka-testkit" % "2.3.6" % "test",
       "org.scalatest" %% "scalatest" % "2.1.6" % "test"
-    )
+    ),
+    assemblyJarName in assembly := s"rafi-$name.jar"
   )
 
 lazy val common = rafiModule("common")
@@ -30,7 +31,8 @@ lazy val producer = rafiModule("producer")
       "com.github.scala-incubator.io" %% "scala-io-core" % "0.4.3-1",
       "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3-1",
       "ch.qos.logback" % "logback-classic" % "1.1.2"
-    )
+    ),
+    mainClass in assembly := Some("producer.StreamerApp")
   )
 
 lazy val consumer = rafiModule("consumer")
@@ -41,6 +43,7 @@ lazy val consumer = rafiModule("consumer")
       "com.github.scala-incubator.io" %% "scala-io-core" % "0.4.3-1",
       "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3-1",
       "ch.qos.logback" % "logback-classic" % "1.1.2"
-    )
+    ),
+    mainClass in assembly := Some("consumer.ConsumerApp")
   )
   
