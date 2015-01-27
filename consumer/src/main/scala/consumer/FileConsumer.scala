@@ -1,10 +1,12 @@
 package consumer
 
-import java.nio.file.Path
 
-import akka.actor.{ActorLogging, Actor}
+import akka.actor.{Props, ActorLogging, Actor}
+import common.{LogLine, SubscribeAll, Routes, UnsubscribeAll}
 
 import scala.collection.mutable
+import scalax.io._
+import scalax.file.Path
 
 class FileConsumer(writeDir: String, remoteAddress: String, remotePort: String) extends Actor with ActorLogging {
   implicit val codec = scalax.io.Codec.UTF8
