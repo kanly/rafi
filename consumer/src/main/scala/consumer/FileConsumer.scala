@@ -2,6 +2,8 @@ package consumer
 
 import java.nio.file.Path
 
+import akka.actor.{ActorLogging, Actor}
+
 import scala.collection.mutable
 
 class FileConsumer(writeDir: String, remoteAddress: String, remotePort: String) extends Actor with ActorLogging {
