@@ -20,10 +20,10 @@ To start producer jar use
 ```
 java -jar rafi-producer.jar <path_to_log_1> [... <path_to_logfile_n>] 
 ```
-by default it will bind on **0.0.0.0:9599** to change this defaults use _bindAddress_ and _bindPort_ system variables
+by default akka remote binds on **0.0.0.0:9599** to change these defaults use _bindAddress_ and _bindPort_ system variables
 
 To start consumer jar use
 ```
 java -jar rafi-consumer.jar <path_to_local_log_dir> <producer_ip> <producer_port>
 ```
-by default it will bind on **0.0.0.0:9598** to change this defaults use _bindAddress_ and _bindPort_ system variables
+by default akka remote binds on **0.0.0.0:9598** to change these defaults use _bindAddress_ and _bindPort_ system variables
