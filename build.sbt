@@ -21,6 +21,7 @@ def rafiModule(name: String): Project = Project(name, file(name)).
       "com.typesafe.akka" %% "akka-testkit" % "2.3.6" % "test",
       "org.scalatest" %% "scalatest" % "2.1.6" % "test"
     ),
+    licenses += ("agpl-3.0", url("https://www.gnu.org/licenses/agpl-3.0.html")),
     assemblyJarName in assembly := s"rafi-$name.jar"
   )
 
