@@ -8,7 +8,7 @@ scalacOptions += "-target:jvm-1.6"
 
 def rafiModule(name: String): Project = Project(name, file(name)).
   settings(
-    version := "0.1",
+    version := "0.1.1",
     organization := "org.kanly",
     scalaVersion := "2.11.1",
     libraryDependencies ++= Seq(
@@ -22,7 +22,7 @@ def rafiModule(name: String): Project = Project(name, file(name)).
       "org.scalatest" %% "scalatest" % "2.1.6" % "test"
     ),
     licenses += ("agpl-3.0", url("https://www.gnu.org/licenses/agpl-3.0.html")),
-    assemblyJarName in assembly := s"rafi-$name.jar"
+    assemblyJarName in assembly := s"rafi-$name-${version.value}.jar"
   )
 
 lazy val common = rafiModule("common")
